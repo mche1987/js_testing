@@ -1,0 +1,65 @@
+const assert = require("assert");
+const chai = require("chai");
+const expect = chai.expect;
+
+describe("Mocha", function () {
+    it("runs correctly", function () {
+        expect("hello").to.equal("hello");
+        expect("hello").to.not.equal("goodbye");
+        expect(24).to.be.below(25);
+        expect(24).to.be.at.least(23);
+    });
+    xit("does something wonderful", function () {
+    // I'm using `xit` because I haven't had time to write this test yet
+    });
+})
+
+describe("the car", function () {
+    it("has 4 wheels", function () {
+         // Tests go here        
+    });
+    it("can accelerate from 0mph to 60mph in less than 6 seconds", function () {
+        // Tests go here
+    });
+    it("deploys an airbag in an accident", function () {
+        // Tests go here
+    });
+});
+
+describe("MyObject", function () {
+    it("is super awesome", function () {
+        // CODE
+    });
+    describe("#myFirstMethod()", function () {
+        it("can do all sorts of things", function () {
+            // CODE
+        });
+        it("is absolutely beautiful", function () {
+            // CODE
+        });
+    });
+    describe("#mySecondMethod()", function() {
+        it("is better than the first method", function () {
+            // CODE
+        });
+    });
+});
+
+describe("#show", function () {
+    context("when logged in", function () {
+        it("shows the user's details", function () {
+            // CODE
+        });
+        it("displays a logout button", function () {
+            // CODE 
+        });
+    });
+    context("when not logged in", function () {
+        it("redirects back to login page", function () {
+            // CODE
+        });
+        it("displays an error", function () {
+            // CODE
+        });
+    });
+});
