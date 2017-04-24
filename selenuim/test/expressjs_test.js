@@ -31,12 +31,10 @@ describe("Express Repo on GitHub", function () {
     it("has 'expressjs/express' in the title", function (done) {
         this.timeout(10000);
         var d = this.driver;  // Because we need to use it within the closure
-        d.get("https://github.com/expressjs/express").then(function () {
-            d.findElement(by.css("title")).getText().then(function (titleText) {
-                console.log(titleText)
-                expect(titleText).to.include("expressjs/express");
-                done();  // `done` must happen AFTER we have completed everything
-            });
+        d.get('http://en.wikipedia.org/wiki/Wiki');
+        d.findElements(bycss('[href^="/wiki/"]')).then(function(links){
+            console.log('Found', links.length, 'Wiki links.' )
+            done();
         });
     });
 });
